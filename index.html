@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Prueba promise all</title>
+
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>
+</head>
+<body ng-app="promiseAll">
+	<div ng-controller="AppController as vm" class="container">
+		<h1>Zona horarias</h1>
+
+		<table class="table">
+  			<thead>
+  				<th>Zona/Pais</th>
+  				<th>Fecha y hora</th>
+  			</thead>
+  			<tbody>
+  				<tr ng-repeat="pais in vm.paises">
+  					<td>{{pais.data.zoneName}}</td>
+  					<td>{{pais.data.timestamp | timestamp}}</td>
+  				</tr>
+  			</tbody>
+		</table>
+	</div>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="app/app.module.js"></script>
+	<script type="text/javascript" src="app/app.service.js"></script>
+	<script type="text/javascript" src="app/app.filter.js"></script>
+	<script type="text/javascript" src="app/app.controller.js"></script>
+</body>
+</html>
